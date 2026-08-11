@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omm Prakash Mohanty — Web Developer</title>
+<meta name="description" content="Portfolio of Omm Prakash Mohanty, CSE student at ITER SOA, aspiring web developer.">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="preloader" id="preloader">
+  <svg class="preloader__web" viewBox="0 0 120 120" width="120" height="120">
+    <circle cx="60" cy="60" r="6" class="web-core"/>
+    <g class="web-rings">
+      <circle cx="60" cy="60" r="18" />
+      <circle cx="60" cy="60" r="34" />
+      <circle cx="60" cy="60" r="50" />
+    </g>
+    <g class="web-spokes">
+      <line x1="60" y1="60" x2="60" y2="6"/>
+      <line x1="60" y1="60" x2="60" y2="114"/>
+      <line x1="60" y1="60" x2="6" y2="60"/>
+      <line x1="60" y1="60" x2="114" y2="60"/>
+      <line x1="60" y1="60" x2="21" y2="21"/>
+      <line x1="60" y1="60" x2="99" y2="99"/>
+      <line x1="60" y1="60" x2="21" y2="99"/>
+      <line x1="60" y1="60" x2="99" y2="21"/>
+    </g>
+  </svg>
+  <p class="preloader__label">SPINNING UP<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+</div>
+
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<canvas id="threadCanvas"></canvas>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__brand">OP<span>M</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about" class="nav__link" data-index="01">About</a>
+      <a href="#skills" class="nav__link" data-index="02">Skills</a>
+      <a href="#experience" class="nav__link" data-index="03">Experience</a>
+      <a href="#projects" class="nav__link" data-index="04">Projects</a>
+      <a href="#journey" class="nav__link" data-index="05">Journey</a>
+      <a href="#contact" class="nav__link" data-index="06">Contact</a>
+    </nav>
+    <a href="#contact" class="nav__cta">Let's Talk</a>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+
+<section class="hero" id="home">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero__vignette"></div>
+  <div class="hero__glow hero__glow--red"></div>
+  <div class="hero__glow hero__glow--blue"></div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow reveal" data-reveal="fade">Bhubaneswar, Odisha — Available for Internships</p>
+    <h1 class="hero__name reveal" data-reveal="up">
+      <span class="line">OMM PRAKASH</span>
+      <span class="line hero__name--accent">MOHANTY</span>
+    </h1>
+    <p class="hero__subtitle reveal" data-reveal="up">3rd Year B.Tech CSE Student · ITER, SOA University, Bhubaneswar</p>
+    <p class="hero__tagline reveal" data-reveal="up">
+      <span>Aspiring Web Developer</span>
+      <span class="dot">•</span>
+      <span>Java Learner</span>
+      <span class="dot">•</span>
+      <span>Building Real-World Projects</span>
+    </p>
+
+    <div class="hero__actions reveal" data-reveal="up">
+      <a href="#projects" class="btn btn--primary">
+        <span>View Projects</span>
+      </a>
+      <a href="resume.pdf" download class="btn btn--ghost">
+        <span>Download Resume</span>
+      </a>
+    </div>
+
+    <div class="hero__socials reveal" data-reveal="fade">
+      <a href="https://github.com/ommm5298-hub" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.14c-3.17.69-3.83-1.36-3.83-1.36-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.53-.29-5.19-1.27-5.19-5.62 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.36-2.67 5.32-5.21 5.6.41.36.77 1.06.77 2.14v3.17c0 .3.21.66.79.55A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/omm-prakash-mohanty-b2441b376" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/></svg>
+      </a>
+      <a href="mailto:ommm5298@gmail.com" aria-label="Email" class="social-link">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm18.4 2H3.6l8.4 6.3L20.4 6ZM3 8.24V18h18V8.24l-8.4 6.3a1 1 0 0 1-1.2 0L3 8.24Z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <a href="#about" class="hero__scroll" aria-label="Scroll down">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-text">SCROLL</span>
+  </a>
+</section>
+
+
+<section class="section about" id="about">
+  <div class="section__frame">
+    <p class="section__eyebrow reveal" data-reveal="fade">01 / About</p>
+    <h2 class="section__title reveal" data-reveal="up">The Developer <span class="text-accent">Behind the Code</span></h2>
+
+    <div class="about__grid">
+      <div class="about__portrait reveal" data-reveal="left">
+        <div class="portrait__frame">
+          <div class="portrait__ring"></div>
+          <img src="profile.jpg" alt="Omm Prakash Mohanty" class="portrait__img" onerror="this.style.display='none'; this.parentElement.classList.add('portrait--fallback')">
+          <div class="portrait__fallback-initials">OM</div>
+        </div>
+      </div>
+
+      <div class="about__text reveal" data-reveal="right">
+        <p class="about__paragraph">
+          I'm <strong>Omm Prakash Mohanty</strong>, a third-year Computer Science and Engineering student at ITER, SOA University, Bhubaneswar. I enjoy building responsive web applications, exploring modern frontend technologies, and solving real-world problems through code.
+        </p>
+        <p class="about__paragraph">
+          I'm currently focused on <strong>Java</strong>, <strong>Data Structures &amp; Algorithms</strong>, <strong>React</strong>, and <strong>Full-Stack Development</strong> — steadily building the foundation for a career as a software engineer.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-card__num" data-count="3">0</span>
+            <span class="stat-card__plus">+</span>
+            <span class="stat-card__label">Projects Built</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num" data-count="4">0</span>
+            <span class="stat-card__label">Languages Known</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__text">3rd Year</span>
+            <span class="stat-card__label">CSE Undergraduate</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__text">React & DSA</span>
+            <span class="stat-card__label">Currently Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section skills" id="skills">
+  <div class="section__frame">
+    <p class="section__eyebrow reveal" data-reveal="fade">02 / Skills</p>
+    <h2 class="section__title reveal" data-reveal="up">Tools of the <span class="text-accent">Trade</span></h2>
+
+    <div class="skills__grid">
+
+      <div class="skill-card reveal" data-reveal="up">
+        <div class="skill-card__head">
+          <span class="skill-card__icon">&lt;/&gt;</span>
+          <h3>Languages</h3>
+        </div>
+        <ul class="skill-bars">
+          <li class="skill-bar"><span class="skill-bar__name">Java</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="80"></div></div></li>
+          <li class="skill-bar"><span class="skill-bar__name">JavaScript</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="82"></div></div></li>
+          <li class="skill-bar"><span class="skill-bar__name">HTML</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="92"></div></div></li>
+          <li class="skill-bar"><span class="skill-bar__name">CSS</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="88"></div></div></li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal" data-reveal="up">
+        <div class="skill-card__head">
+          <span class="skill-card__icon">◧</span>
+          <h3>Frontend</h3>
+        </div>
+        <ul class="skill-bars">
+          <li class="skill-bar"><span class="skill-bar__name">React</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="70"></div></div></li>
+          <li class="skill-bar"><span class="skill-bar__name">Responsive Design</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="85"></div></div></li>
+          <li class="skill-bar"><span class="skill-bar__name">DOM Manipulation</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="83"></div></div></li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal" data-reveal="up">
+        <div class="skill-card__head">
+          <span class="skill-card__icon">⚙</span>
+          <h3>Tools</h3>
+        </div>
+        <ul class="skill-bars">
+          <li class="skill-bar"><span class="skill-bar__name">Git</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="78"></div></div></li>
+          <li class="skill-bar"><span class="skill-bar__name">GitHub</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="80"></div></div></li>
+          <li class="skill-bar"><span class="skill-bar__name">VS Code</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="90"></div></div></li>
+          <li class="skill-bar"><span class="skill-bar__name">Figma</span><div class="skill-bar__track"><div class="skill-bar__fill" data-level="65"></div></div></li>
+        </ul>
+      </div>
+
+      <div class="skill-card skill-card--learning reveal" data-reveal="up">
+        <div class="skill-card__head">
+          <span class="skill-card__icon">↻</span>
+          <h3>Currently Learning</h3>
+        </div>
+        <ul class="tag-list">
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MongoDB</li>
+          <li>Data Structures &amp; Algorithms</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section experience" id="experience">
+  <div class="section__frame">
+    <p class="section__eyebrow reveal" data-reveal="fade">03 / Experience</p>
+    <h2 class="section__title reveal" data-reveal="up">On-the-Job <span class="text-accent">Learning</span></h2>
+
+    <div class="exp-card reveal" data-reveal="up">
+      <div class="exp-card__marker"></div>
+      <div class="exp-card__body">
+        <div class="exp-card__top">
+          <div>
+            <h3 class="exp-card__role">Web Development Intern</h3>
+            <p class="exp-card__company">Pinnacle Labs</p>
+          </div>
+          <span class="exp-card__batch">2026 Batch</span>
+        </div>
+        <p class="exp-card__desc">
+          Worked on frontend web development projects using HTML, CSS, and JavaScript, built responsive interfaces, and strengthened practical development and Git/GitHub workflow skills.
+        </p>
+        <div class="exp-card__tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>GitHub</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section projects" id="projects">
+  <div class="section__frame">
+    <p class="section__eyebrow reveal" data-reveal="fade">04 / Projects</p>
+    <h2 class="section__title reveal" data-reveal="up">Selected <span class="text-accent">Work</span></h2>
+
+    <div class="projects__grid">
+
+      <article class="project-card reveal" data-reveal="up" data-project="sgpa">
+        <div class="project-card__glow"></div>
+        <div class="project-card__top">
+          <span class="project-card__index">01</span>
+          <span class="project-card__tag">Web App</span>
+        </div>
+        <h3 class="project-card__title">SGPA Simulator</h3>
+        <p class="project-card__desc">A responsive web application that calculates semester SGPA and CGPA based on subject grades and credits.</p>
+        <div class="project-card__stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://bandita-07.github.io/SGPA_Simulator/" target="_blank" rel="noopener" class="project-link">Live Demo ↗</a>
+          <a href="https://github.com/ommm5298-hub" target="_blank" rel="noopener" class="project-link">Source ↗</a>
+        </div>
+        <button class="project-card__expand" data-open-modal="sgpa" aria-label="View details">＋</button>
+      </article>
+
+      <article class="project-card reveal" data-reveal="up" data-project="habit">
+        <div class="project-card__glow"></div>
+        <div class="project-card__top">
+          <span class="project-card__index">02</span>
+          <span class="project-card__tag">Productivity</span>
+        </div>
+        <h3 class="project-card__title">Habit Battle</h3>
+        <p class="project-card__desc">A gamified productivity tracker where two users compete through daily habits, streaks, points, and rankings.</p>
+        <div class="project-card__stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-card__links">
+          <a href="#" class="project-link project-link--disabled">Live Demo ↗</a>
+          <a href="https://github.com/ommm5298-hub" target="_blank" rel="noopener" class="project-link">Source ↗</a>
+        </div>
+        <button class="project-card__expand" data-open-modal="habit" aria-label="View details">＋</button>
+      </article>
+
+      <article class="project-card reveal" data-reveal="up" data-project="portfolio">
+        <div class="project-card__glow"></div>
+        <div class="project-card__top">
+          <span class="project-card__index">03</span>
+          <span class="project-card__tag">Personal Brand</span>
+        </div>
+        <h3 class="project-card__title">Portfolio Website</h3>
+        <p class="project-card__desc">A cinematic, Spider-Man-inspired portfolio featuring custom animations, web effects, responsive design, and modern UI.</p>
+        <div class="project-card__stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-card__links">
+          <a href="#" class="project-link project-link--disabled">Live Demo ↗</a>
+          <a href="https://github.com/ommm5298-hub" target="_blank" rel="noopener" class="project-link">Source ↗</a>
+        </div>
+        <button class="project-card__expand" data-open-modal="portfolio" aria-label="View details">＋</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true">
+    <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+    <span class="modal__index" id="modalIndex">01</span>
+    <h3 class="modal__title" id="modalTitle">Project Title</h3>
+    <p class="modal__desc" id="modalDesc">Description</p>
+    <div class="modal__stack" id="modalStack"></div>
+    <div class="modal__links" id="modalLinks"></div>
+  </div>
+</div>
+
+<section class="section journey" id="journey">
+  <div class="section__frame">
+    <p class="section__eyebrow reveal" data-reveal="fade">05 / Journey</p>
+    <h2 class="section__title reveal" data-reveal="up">The <span class="text-accent">Timeline</span></h2>
+
+    <div class="timeline">
+      <div class="timeline__line"></div>
+
+      <div class="timeline__item reveal" data-reveal="left">
+        <div class="timeline__node"></div>
+        <div class="timeline__card">
+          <span class="timeline__year">2024</span>
+          <p>Started B.Tech in Computer Science &amp; Engineering at ITER, SOA University.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item timeline__item--right reveal" data-reveal="right">
+        <div class="timeline__node"></div>
+        <div class="timeline__card">
+          <span class="timeline__year">2025</span>
+          <p>Learned Java and began building web development projects.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal" data-reveal="left">
+        <div class="timeline__node timeline__node--active"></div>
+        <div class="timeline__card timeline__card--active">
+          <span class="timeline__year">2026</span>
+          <p>Joined Pinnacle Labs as a Web Development Intern and started learning React and full-stack development.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item timeline__item--right reveal" data-reveal="right">
+        <div class="timeline__node timeline__node--future"></div>
+        <div class="timeline__card timeline__card--future">
+          <span class="timeline__year">Future</span>
+          <p>Aiming to become a skilled full-stack developer and contribute to impactful software products.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section contact" id="contact">
+  <div class="section__frame">
+    <p class="section__eyebrow reveal" data-reveal="fade">06 / Contact</p>
+    <h2 class="section__title reveal" data-reveal="up">Let's Build <span class="text-accent">Something</span></h2>
+    <p class="contact__intro reveal" data-reveal="up">Have an opportunity, a project, or just want to talk tech? My line's open.</p>
+
+    <div class="contact__grid">
+      <div class="contact__info reveal" data-reveal="left">
+        <a href="mailto:ommm5298@gmail.com" class="contact-card">
+          <span class="contact-card__icon">✉</span>
+          <div>
+            <span class="contact-card__label">Email</span>
+            <span class="contact-card__value">ommm5298@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://github.com/ommm5298-hub" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card__icon">⌥</span>
+          <div>
+            <span class="contact-card__label">GitHub</span>
+            <span class="contact-card__value">github.com/ommm5298-hub</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/omm-prakash-mohanty-b2441b376" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card__icon">in</span>
+          <div>
+            <span class="contact-card__label">LinkedIn</span>
+            <span class="contact-card__value">omm-prakash-mohanty</span>
+          </div>
+        </a>
+        <div class="contact-card contact-card--static">
+          <span class="contact-card__icon">◎</span>
+          <div>
+            <span class="contact-card__label">Location</span>
+            <span class="contact-card__value">Bhubaneswar, Odisha, India</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact__form reveal" data-reveal="right" id="contactForm" action="#" method="POST">
+        <div class="form-group">
+          <input type="text" id="formName" name="name" required placeholder=" ">
+          <label for="formName">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="formEmail" name="email" required placeholder=" ">
+          <label for="formEmail">Your Email</label>
+        </div>
+        <div class="form-group">
+          <textarea id="formMessage" name="message" required placeholder=" " rows="5"></textarea>
+          <label for="formMessage">Your Message</label>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">
+          <span id="formBtnText">Send Message</span>
+        </button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <a href="#home" class="nav__brand">OP<span>M</span></a>
+    <p class="footer__note">Designed &amp; built by Omm Prakash Mohanty · Bhubaneswar, Odisha</p>
+    <div class="footer__socials">
+      <a href="https://github.com/ommm5298-hub" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+      <a href="https://www.linkedin.com/in/omm-prakash-mohanty-b2441b376" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+      <a href="mailto:ommm5298@gmail.com" aria-label="Email">@</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
